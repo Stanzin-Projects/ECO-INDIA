@@ -1,0 +1,246 @@
+/* ===== About Main ===== */
+.about-main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-main-image {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.about-main-image img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+}
+
+.experience-badge {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  background: var(--primary);
+  color: var(--white);
+  padding: 16px 28px;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  animation: float 3s ease infinite;
+}
+
+.about-main-content h2 {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--dark);
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.about-main-content p {
+  font-size: 15px;
+  color: var(--gray-2);
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+/* ===== Values ===== */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.value-card {
+  background: var(--white);
+  padding: 32px 24px;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.value-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.value-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--primary);
+  font-size: 26px;
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+.value-card:hover .value-icon {
+  background: var(--primary);
+  color: var(--white);
+  transform: scale(1.1);
+}
+
+.value-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+
+.value-card p {
+  font-size: 14px;
+  color: var(--gray-2);
+  line-height: 1.6;
+}
+
+/* ===== Services ===== */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.services-content .section-subtitle {
+  text-align: left;
+}
+
+.services-content .section-title {
+  text-align: left;
+  margin-bottom: 12px;
+}
+
+.services-content > p {
+  font-size: 15px;
+  color: var(--gray-2);
+  margin-bottom: 20px;
+}
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.services-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  color: var(--gray-1);
+}
+
+.check-icon {
+  color: var(--success);
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.services-image {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.services-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+}
+
+/* ===== Registrations ===== */
+.registrations-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.registration-card {
+  background: var(--white);
+  padding: 28px 20px;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.registration-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.reg-icon {
+  font-size: 32px;
+  color: var(--primary);
+}
+
+.registration-card span {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dark);
+  line-height: 1.4;
+}
+
+/* ===== About CTA ===== */
+.about-cta {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+}
+
+.about-cta-content {
+  text-align: center;
+  color: var(--white);
+}
+
+.about-cta-content h2 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.about-cta-content p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 24px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .values-grid,
+  .registrations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-main-grid,
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .about-main-image img,
+  .services-image img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 640px) {
+  .values-grid,
+  .registrations-grid {
+    grid-template-columns: 1fr;
+  }
+}
